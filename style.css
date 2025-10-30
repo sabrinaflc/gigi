@@ -103,6 +103,7 @@ button {
     transition: all 0.3s ease;
     width: 100%;
     margin-top: 10px;
+    animation: pulse 2s infinite;
 }
 
 button:hover,
@@ -110,6 +111,7 @@ button:focus {
     background-color: #d67090;
     box-shadow: 0 0 12px #c55d80;
     transform: translateY(-1px);
+    animation: pulse 2s infinite;
 }
 
 /* ============== ELEMENTOS ESPECIAIS ============== */
@@ -132,7 +134,7 @@ button:focus {
 
 /* ============== FOOTER ============== */
 .footer {
-    position: fixed;
+    position:absolute;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -146,10 +148,9 @@ button:focus {
 }
 
 .footer img {
-    height: 50px;
+    height: 70px;
     width: auto;
     filter: drop-shadow(0 0 4px #c55d80);
-    animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
