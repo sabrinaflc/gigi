@@ -1,92 +1,215 @@
-        .logo {
-            max-width: 450px; /* largura máxima */
-            height: auto; /* mantém proporção */
-            display: block;
-            margin: 0 auto; /* centraliza */
-            margin-top: 30px;
-        }
+/* ============== RESET E BASE ============== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        body {
-            background-color: #faf3e1;
-            font-family: 'Courier New', Courier, monospace; /* Fonte simples para um toque "LED" como display digital */
-            color: #c55d80;
-            text-align: center;
-            padding: 20px;
-        }
-        h1 {
-            font-family: 'Brush Script MT', cursive; /* Fonte cursiva para toque princesa */
-            color: #c55d80;
-            text-shadow: 0 0 5px #c55d80; /* Efeito de brilho LED */
-        }
-        form {
-            max-width: 400px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #c55d80; /* Borda com brilho LED/princesa */
-        }
-        label {
-            margin: 0 auto;
-            display: block;
-            margin: 10px 0;
-            color: #c55d80;
-        }
-        input[type="radio"] {
-            margin: 0 auto;
-            accent-color: #c55d80;
-        }
-        input[type="text"], input[type="tel"] {
-            display: flex;
-            justify-content: center; 
-            margin: 0 auto;
-            width: 100%;
-            padding: 8px;
-            margin: 5px 0;
-            border: 1px solid #c55d80;
-            border-radius: 5px;
-            background-color: #faf3e1;
-            color: #c55d80;
-        }
-        button {
-            background-color: #c55d80;
-            color: #faf3e1;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-family: 'Courier New', Courier, monospace;
-            text-shadow: 0 0 3px #faf3e1; /* Efeito LED no botão */
-        }
-        button:hover {
-            box-shadow: 0 0 10px #c55d80;
-        }
-        #phoneField {
-            display: none;
-        }
-        /* Decorações princesa: corações simples como LED */
-        .decor {
-            font-size: 24px;
-            color: #c55d80;
-            text-shadow: 0 0 5px #c55d80;
-            margin: 10px 0;
-        }
+html {
+    font-size: 16px;
+}
 
-        .footer {
-            display: flex;
-            justify-content: center;     /* Centraliza horizontalmente */
-            align-items: center;         /* Centraliza verticalmente */
-            height: 300px;               /* Altura do footer (ajuste conforme necessário) */
-            padding: 20px 0;
-            position: fixed;             /* Opcional: fixa o footer na parte inferior */
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            box-sizing: border-box;
-        }
+body {
+    background-color: #faf3e1;
+    font-family: 'Courier New', Courier, monospace;
+    color: #c55d80;
+    text-align: center;
+    padding: 20px;
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 100px; /* Espaço para o footer fixo */
+}
 
-        .footer img {
-            height: 60px;                /* Tamanho pequeno da imagem */
-            width: auto;                 /* Mantém a proporção */
-            display: block;
-        }
+/* ============== LOGO ============== */
+.logo {
+    max-width: 90vw;
+    width: 450px;
+    height: auto;
+    display: block;
+    margin: 30px auto 20px;
+}
+
+/* ============== TIPOGRAFIA ============== */
+h1 {
+    font-family: 'Brush Script MT', cursive, serif;
+    color: #c55d80;
+    text-shadow: 0 0 5px #c55d80;
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    margin-bottom: 1rem;
+}
+
+/* ============== FORMULÁRIO ============== */
+form {
+    max-width: 400px;
+    width: 90%;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(197, 93, 128, 0.4);
+    backdrop-filter: blur(5px);
+}
+
+label {
+    display: block;
+    margin: 12px 0 6px;
+    text-align: left;
+    font-weight: bold;
+    color: #c55d80;
+    font-size: 0.95rem;
+}
+
+input[type="radio"] {
+    accent-color: #c55d80;
+    transform: scale(1.1);
+    margin-right: 8px;
+}
+
+input[type="text"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0 12px;
+    border: 1.5px solid #c55d80;
+    border-radius: 6px;
+    background-color: #faf3e1;
+    color: #c55d80;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus {
+    outline: none;
+    border-color: #e6809f;
+    box-shadow: 0 0 8px rgba(197, 93, 128, 0.5);
+    background-color: #fff8f5;
+}
+
+button {
+    background-color: #c55d80;
+    color: #faf3e1;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1rem;
+    text-shadow: 0 0 3px #faf3e1;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover,
+button:focus {
+    background-color: #d67090;
+    box-shadow: 0 0 12px #c55d80;
+    transform: translateY(-1px);
+}
+
+/* ============== ELEMENTOS ESPECIAIS ============== */
+#phoneField {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.decor {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    color: #c55d80;
+    text-shadow: 0 0 6px #c55d80;
+    margin: 15px 0;
+}
+
+/* ============== FOOTER ============== */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    background: linear-gradient(to top, rgba(250, 243, 225, 0.95), transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    backdrop-filter: blur(3px);
+}
+
+.footer img {
+    height: 50px;
+    width: auto;
+    filter: drop-shadow(0 0 4px #c55d80);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* ============== MEDIA QUERIES ============== */
+
+/* Mobile Pequeno */
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+        padding-bottom: 80px;
+    }
+
+    .logo {
+        max-width: 80vw;
+        margin-top: 20px;
+    }
+
+    form {
+        padding: 1.2rem;
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .footer img {
+        height: 40px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+    .logo {
+        max-width: 380px;
+    }
+
+    form {
+        max-width: 420px;
+    }
+}
+
+/* Desktop Pequeno */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .logo {
+        max-width: 420px;
+    }
+}
+
+/* Desktop Grande */
+@media (min-width: 1025px) {
+    .logo {
+        max-width: 450px;
+    }
+
+    form {
+        max-width: 400px;
+    }
+}
