@@ -1,0 +1,92 @@
+        .logo {
+            max-width: 450px; /* largura máxima */
+            height: auto; /* mantém proporção */
+            display: block;
+            margin: 0 auto; /* centraliza */
+            margin-top: 30px;
+        }
+
+        body {
+            background-color: #faf3e1;
+            font-family: 'Courier New', Courier, monospace; /* Fonte simples para um toque "LED" como display digital */
+            color: #c55d80;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-family: 'Brush Script MT', cursive; /* Fonte cursiva para toque princesa */
+            color: #c55d80;
+            text-shadow: 0 0 5px #c55d80; /* Efeito de brilho LED */
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #c55d80; /* Borda com brilho LED/princesa */
+        }
+        label {
+            margin: 0 auto;
+            display: block;
+            margin: 10px 0;
+            color: #c55d80;
+        }
+        input[type="radio"] {
+            margin: 0 auto;
+            accent-color: #c55d80;
+        }
+        input[type="text"], input[type="tel"] {
+            display: flex;
+            justify-content: center; 
+            margin: 0 auto;
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #c55d80;
+            border-radius: 5px;
+            background-color: #faf3e1;
+            color: #c55d80;
+        }
+        button {
+            background-color: #c55d80;
+            color: #faf3e1;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Courier New', Courier, monospace;
+            text-shadow: 0 0 3px #faf3e1; /* Efeito LED no botão */
+        }
+        button:hover {
+            box-shadow: 0 0 10px #c55d80;
+        }
+        #phoneField {
+            display: none;
+        }
+        /* Decorações princesa: corações simples como LED */
+        .decor {
+            font-size: 24px;
+            color: #c55d80;
+            text-shadow: 0 0 5px #c55d80;
+            margin: 10px 0;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: center;     /* Centraliza horizontalmente */
+            align-items: center;         /* Centraliza verticalmente */
+            height: 300px;               /* Altura do footer (ajuste conforme necessário) */
+            padding: 20px 0;
+            position: fixed;             /* Opcional: fixa o footer na parte inferior */
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .footer img {
+            height: 60px;                /* Tamanho pequeno da imagem */
+            width: auto;                 /* Mantém a proporção */
+            display: block;
+        }
