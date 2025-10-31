@@ -15,12 +15,10 @@ body {
     color: #c55d80;
     text-align: center;
     padding: 20px;
-    /* min-height: 100vh; */
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
     justify-content: space-between;
-    position: relative;
-    padding-bottom: 100px; /* Espaço para o footer fixo */
 }
 
 /* ============== LOGO ============== */
@@ -62,12 +60,30 @@ label {
     font-size: 0.95rem;
 }
 
-input[type="radio"] {
-    accent-color: #c55d80;
-    transform: scale(1.1);
-    margin-right: 8px;
+/* ============== RADIO BUTTONS ============== */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 20px 0;
+    text-align: left;
 }
 
+.radio-group label {
+    font-weight: normal;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.radio-group input[type="radio"] {
+    accent-color: #c55d80;
+    transform: scale(1.2);
+    margin-right: 10px;
+}
+
+/* ============== INPUTS ============== */
 input[type="text"],
 input[type="tel"] {
     width: 100%;
@@ -89,6 +105,7 @@ input[type="tel"]:focus {
     background-color: #fff8f5;
 }
 
+/* ============== BOTÃO ============== */
 button {
     background-color: #c55d80;
     color: #faf3e1;
@@ -111,7 +128,6 @@ button:focus {
     background-color: #d67090;
     box-shadow: 0 0 12px #c55d80;
     transform: translateY(-1px);
-    animation: pulse 2s infinite;
 }
 
 /* ============== ELEMENTOS ESPECIAIS ============== */
@@ -134,21 +150,17 @@ button:focus {
 
 /* ============== FOOTER ============== */
 .footer {
-    position:absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px 0;
+    margin-top: 60px;
+    padding: 20px 0;
     background: linear-gradient(to top, rgba(250, 243, 225, 0.95), transparent);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
     backdrop-filter: blur(3px);
 }
 
 .footer img {
-    height: 70px;
+    height: 50px;
     width: auto;
     filter: drop-shadow(0 0 4px #c55d80);
 }
@@ -164,7 +176,6 @@ button:focus {
 @media (max-width: 480px) {
     body {
         padding: 15px;
-        padding-bottom: 80px;
     }
 
     .logo {
@@ -183,6 +194,10 @@ button:focus {
 
     .footer img {
         height: 40px;
+    }
+
+    .radio-group input[type="radio"] {
+        transform: scale(1.1);
     }
 }
 

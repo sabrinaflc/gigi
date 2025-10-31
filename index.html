@@ -6,7 +6,7 @@
     <title>Giovanna Barros | Confirme sua Presença</title>
     <link rel="shortcut icon" href="assets/ROSA.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <link rel="script" href="script.js">
+    <!-- SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
@@ -15,32 +15,40 @@
         <img src="assets/GB.png" alt="GIOVANNA BARROS" class="logo">
     </header>
 
-    <p><BR><br><br>Por favor, confirme se você virá à festa!</p>
-    <form id="rsvpForm">
-        <label>
-            <input type="radio" name="attendance" value="sim" onclick="togglePhone(true)"> Sim, eu vou!
-        </label>
-        <label>
-            <input type="radio" name="attendance" value="nao" onclick="togglePhone(false)"> Não, infelizmente não poderei ir.
-        </label><br>
-        <label>
-            Nome Completo:
-            <input type="text" id="name" name="name" required>
-        </label>
-        <div id="phoneField">
+    <main>
+        <p><br><br><br>Por favor, confirme se você virá à festa!</p>
+        
+        <form id="rsvpForm">
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="attendance" value="sim" required> Sim, eu vou!
+                </label>
+                <label>
+                    <input type="radio" name="attendance" value="nao"> Não, infelizmente não poderei ir.
+                </label>
+            </div>
+
             <label>
-                Número de Telefone:
-                <input type="tel" id="phone" name="phone" required>
+                Nome Completo:
+                <input type="text" name="name" required>
             </label>
-        </div>
-        <button type="submit">Enviar Confirmação</button>
-    </form>
+
+            <div id="phoneField" style="display: none;">
+                <label>
+                    Número de Telefone (com DDD):
+                    <input type="tel" name="phone" placeholder="(11) 98765-4321">
+                </label>
+            </div>
+
+            <button type="submit">Enviar Confirmação</button>
+        </form>
+    </main>
 
     <footer class="footer">
-    <a>
         <img src="assets/ROSA.png" alt="GIOVANNA">
-    </a>
-</footer>
+    </footer>
 
+    <!-- Script no final para carregar após o DOM -->
+    <script src="script.js"></script>
 </body>
 </html>
